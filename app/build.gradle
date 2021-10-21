@@ -17,7 +17,7 @@ idea {
 
 android {
     compileSdkVersion 31
-    buildToolsVersion '29.0.3'
+    buildToolsVersion '31.0.0'
 
     defaultConfig {
         applicationId "ar.com.wolox.android.example"
