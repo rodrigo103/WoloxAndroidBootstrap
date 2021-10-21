@@ -148,7 +148,6 @@ dependencies {
     testImplementation "org.assertj:assertj-core:$assertj_version"
     testImplementation "org.mockito.kotlin:mockito-kotlin:$mockito_kotlin_version"
 
-
     // Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
 }
