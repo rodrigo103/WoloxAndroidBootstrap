@@ -116,8 +116,12 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     // Wolmo
-    implementation "com.github.Wolox:wolmo-core-android:$wolmo_core_version"
-    implementation "com.github.Wolox:wolmo-networking-android:$wolmo_networking_version"
+    implementation("com.github.Wolox:wolmo-core-android:$wolmo_core_version") {
+        exclude group: 'org.jetbrains.kotlinx'
+    }
+    implementation("com.github.wolox:wolmo-networking-android:$wolmo_networking_version") {
+        exclude group: 'org.jetbrains.kotlinx'
+    }
 
     // Android KTX
     implementation "androidx.core:core-ktx:$android_core_ktx_version"
@@ -143,6 +147,7 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     testImplementation "org.assertj:assertj-core:$assertj_version"
     testImplementation "org.mockito.kotlin:mockito-kotlin:$mockito_kotlin_version"
+
 
     // Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
